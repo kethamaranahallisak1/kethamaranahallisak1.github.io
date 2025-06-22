@@ -1,1 +1,260 @@
-kunal
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kunal KS - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #e8f0ff, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #102542;
+      color: #fff;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+    }
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+    }
+    .sidebar h3 {
+      margin-top: 15px;
+      color: #ffc107;
+    }
+    .sidebar nav a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .analog-clock {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+    .hand {
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background: #fff;
+      top: 50%;
+      left: 50%;
+      transform-origin: 0% 50%;
+    }
+    .api-card {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 12px;
+      flex: 1;
+      margin: 10px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+<div class="sidebar">
+  <img src="images/headshot.jpg" alt="Kunal KS">
+  <h3>Kunal KS</h3>
+  <!-- Inside About section -->
+<p><strong>Email:</strong> <span id="email" style="display:none;">your.email@example.com</span></p>
+<button class="btn btn-sm btn-outline-primary" onclick="toggleEmail()">Show/Hide Email</button>
+<script>
+  function toggleEmail() {
+    const email = document.getElementById("email");
+    email.style.display = (email.style.display === "none") ? "inline" : "none";
+  }
+</script>
+
+  <p id="visitMessage" style="font-size: 0.9rem;"></p>
+  <div class="analog-clock">
+    <div class="hand" id="hourHand"></div>
+    <div class="hand" id="minuteHand"></div>
+    <div class="hand" id="secondHand"></div>
+  </div>
+  <div id="clock" class="mt-3" style="font-size: 1rem;"></div>
+  <nav class="mt-4">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#weather">Weather</a>
+    <a href="#api">APIs</a>
+    <a href="waph.html" target="_blank">Go to WAPH Page</a>
+  </nav>
+</div>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Computer Science graduate from NMIT, Bangalore. Experienced in deep learning, AI, object detection with CNNs, YOLO, SSD, and passionate about cloud automation.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.E in Computer Science</strong> – NMIT, Bangalore (2019–2023)</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p><strong>Intern – Bharat Electronics Limited:</strong> Worked on object detection projects using CNNs, YOLO, SSD techniques.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Languages: Python, R, Java</li>
+      <li>Databases: MySQL, MongoDB</li>
+      <li>DevOps & Cloud: AWS, Azure, GCP</li>
+      <li>Others: REST APIs, Git, CNN, YOLO</li>
+    </ul>
+  </section>
+
+  <section id="weather">
+    <h2>Live Weather</h2>
+    <p id="weatherInfo">Loading weather info...</p>
+  </section>
+
+  <section id="api">
+    <h2>Public API Integrations</h2>
+    <div class="d-flex flex-wrap">
+      <div class="api-card" id="jokeCard">
+        <h5>Joke of the Minute</h5>
+        <p id="jokeText">Loading...</p>
+      </div>
+      <div class="api-card" id="adviceCard">
+        <h5>Advice Slip</h5>
+        <p id="adviceText">Loading...</p>
+      </div>
+      <div class="api-card" id="comicCard">
+        <h5>Random XKCD Comic</h5>
+        <img id="comicImg" src="" alt="Comic" style="max-width: 100%; height: auto;">
+        <p id="comicTitle" class="mt-2"></p>
+      </div>
+    </div>
+    <p class="mt-4 text-muted"><small>Disclaimer: The API content is provided by public third-party services. We are not responsible for the data shown here.</small></p>
+    <div class="mt-4">
+      <a href="https://info.flagcounter.com/sfJ3">
+        <img src="https://s01.flagcounter.com/count2/sfJ3/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Kunal KS | Last updated with 💡 and JavaScript</p>
+</footer>
+
+<script>
+  // Visit tracking
+  const lastVisit = document.cookie.replace(/(?:(?:^|.*;\s*)lastVisit\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+  const now = new Date().toLocaleString();
+  document.getElementById("visitMessage").textContent = lastVisit
+    ? "Welcome back! Last visit: " + lastVisit
+    : "Welcome to my homepage!";
+  document.cookie = "lastVisit=" + now;
+
+  // Clock
+  setInterval(() => {
+    const now = new Date();
+    document.getElementById("clock").textContent = now.toLocaleTimeString();
+    document.getElementById("secondHand").style.transform = `rotate(${now.getSeconds() * 6}deg)`;
+    document.getElementById("minuteHand").style.transform = `rotate(${now.getMinutes() * 6}deg)`;
+    document.getElementById("hourHand").style.transform = `rotate(${((now.getHours() % 12) + now.getMinutes()/60) * 30}deg)`;
+  }, 1000);
+
+  // Joke API
+  function loadJoke() {
+    fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("jokeText").textContent = data.joke;
+      });
+  }
+  loadJoke();
+  setInterval(loadJoke, 60000);
+
+  // Advice API
+  function loadAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("adviceText").textContent = data.slip.advice;
+      });
+  }
+  loadAdvice();
+
+  // Comic
+  function loadComic() {
+    fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://xkcd.com/info.0.json"))
+      .then(res => res.json())
+      .then(data => {
+        const comic = JSON.parse(data.contents);
+        document.getElementById("comicImg").src = comic.img;
+        document.getElementById("comicTitle").textContent = comic.title;
+      });
+  }
+  loadComic();
+
+  // Weather
+  function loadWeather() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(pos => {
+        const { latitude, longitude } = pos.coords;
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
+          .then(res => res.json())
+          .then(loc => {
+            const city = loc.address.city || loc.address.town || "your area";
+            fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`)
+              .then(res => res.json())
+              .then(data => {
+                const w = data.current_weather;
+                document.getElementById("weatherInfo").innerHTML =
+                  `<strong>Location:</strong> ${city}<br>
+                  <strong>Temperature:</strong> ${w.temperature}°C<br>
+                  <strong>Wind:</strong> ${w.windspeed} km/h<br>
+                  <strong>Condition:</strong> ${w.weathercode === 0 ? 'Clear' : 'Cloudy'}`;
+              });
+          });
+      });
+    }
+  }
+  loadWeather();
+  function toggleEmail() {
+    const email = document.getElementById("email");
+    email.style.display = (email.style.display === "none") ? "inline" : "none";
+  }
+</script>
+</body>
+</html>
