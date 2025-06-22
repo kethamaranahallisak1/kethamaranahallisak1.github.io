@@ -66,13 +66,13 @@ A disclaimer has been added to clarify that the content from external APIs is no
 
 Below are screenshots of the working features of the site. These will be added before submission:
 
-![index page](images/ss1.jpg)  
+![index page](images/ss1.png)  
 - Home page with sidebar and digital/analog clocks  
 
-![index page](images/ss1.jpg)  
+![index page](images/ss1.png)  
 - Joke, XKCD comic and advice sections showing live API data  
 
-![waph page](images/ss3.jpg)  
+![waph page](images/ss3.png)  
 - WAPH course page  
 
 ---
