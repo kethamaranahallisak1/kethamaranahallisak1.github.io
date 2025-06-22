@@ -20,8 +20,9 @@ This project is part of the coursework for the Web Application Programming and H
 
 The portfolio also features a dedicated page introducing the WAPH course and the projects completed throughout it. The design was built using Bootstrap and enhanced with JavaScript for interactive functionality.
 
-- **Deployed Website**: [https://kethamaranahallisak1.github.io](https://kethamaranahallisak1.github.io)
-- **GitHub Repository**: [https://github.com/kethamaranahallisak1/kethamaranahallisak1.github.io](https://github.com/kethamaranahallisak1/kethamaranahallisak1.github.io)
+- Deployed Website: [https://kethamaranahallisak1.github.io](https://kethamaranahallisak1.github.io)
+- GitHub Repository: [https://github.com/kethamaranahallisak1/kethamaranahallisak1.github.io](https://github.com/kethamaranahallisak1/kethamaranahallisak1.github.io)  
+
 ---
 
 ## Project Requirements and Implementation
